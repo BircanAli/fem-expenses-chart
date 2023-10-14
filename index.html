@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <div class="balance">
+            <h1>My balance</h1>
+            <span>$921.48</span>
+          </div>
+          <div class="logo">
+            <img src="images/logo.svg" alt="card logo" />
+          </div>
+        </header>
+        <section class="chart">
+          <div class="chart-container">
+            <h1>Spending - Last 7 days</h1>
+            <ul class="flex">
+              <li class="day"><span class="one" name="mon"></span>mon</li>
+              <li class="day"><span class="two" name="tue"></span>tue</li>
+              <li class="day"><span class="three" name="wed"></span>wed</li>
+              <li class="day"><span class="four" name="thu"></span>thu</li>
+              <li class="day"><span class="five" name="fri"></span>fri</li>
+              <li class="day"><span class="six" name="sat"></span>sat</li>
+              <li class="day"><span class="seven" name="sun"></span>sun</li>
+            </ul>
+          </div>
+          <div>
+            <hr />
+          </div>
+          <div class="total-container">
+            <h1>Total this month</h1>
+            <div class="total">
+              <span>$478.33</span>
+              <div class="total-month">
+                <span>+2.4%</span>
+                <p>from last month</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="data.json"></script>
+  </body>
+</html>

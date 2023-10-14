@@ -1,0 +1,214 @@
+/* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft red: hsl(10, 79%, 65%)
+- Cyan: hsl(186, 34%, 60%)
+
+### Neutral
+
+- Dark brown: hsl(25, 47%, 15%)
+- Medium brown: hsl(28, 10%, 53%)
+- Cream: hsl(27, 66%, 92%)
+- Very pale orange: hsl(33, 100%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+- Weights: 400, 700 */
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: hsl(27, 66%, 92%);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+
+  .container {
+    /* width: 30rem; */
+    margin: auto;
+    display: grid;
+    place-content: center;
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      background-color: hsl(10, 79%, 65%);
+      border-radius: 10px;
+      padding: 1rem;
+
+      .balance {
+        color: hsl(33, 100%, 98%);
+      }
+
+      h1 {
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+      span {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0.5rem 0;
+      }
+
+      .logo {
+        justify-self: end;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .chart {
+      background-color: hsl(33, 100%, 98%);
+      margin-top: 1.2rem;
+      border-radius: 15px;
+      padding: 2rem;
+
+      .chart-container {
+        margin-bottom: 2rem;
+        h1 {
+          margin: 0 0 5rem 0;
+          font-size: 1.4rem;
+        }
+
+        .flex {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 0;
+          list-style: none;
+
+          .day {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            font-size: 0.8rem;
+            color: rgba(128, 128, 128, 0.813);
+            padding: 0.5rem;
+            padding: 0.5rem;
+
+            span {
+              background-color: hsl(10, 79%, 65%);
+              border-radius: 5px;
+              margin-bottom: 0.4rem;
+              &:hover {
+                background-color: hsla(10, 79%, 65%, 0.445);
+                cursor: pointer;
+                position: relative;
+
+                &::before {
+                  content: attr(data-content);
+                  position: absolute;
+
+                  top: -50px;
+                  left: -12px;
+                  background-color: black;
+                  color: hsl(33, 100%, 98%);
+                  padding: 0.8rem 0.4rem;
+                  border-radius: 5px;
+                  font-weight: 600;
+                }
+              }
+
+              &.one {
+                width: 40px;
+                height: 35px;
+              }
+              &.two {
+                width: 40px;
+                height: 70px;
+              }
+              &.three {
+                width: 40px;
+                height: 105px;
+                background-color: hsl(186, 34%, 60%);
+
+                &:hover {
+                  background-color: hsl(186, 34%, 60%, 0.44);
+                }
+              }
+              &.four {
+                width: 40px;
+                height: 60px;
+              }
+              &.five {
+                width: 40px;
+                height: 45px;
+              }
+              &.six {
+                width: 40px;
+                height: 85px;
+              }
+              &.seven {
+                width: 40px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+
+      hr {
+        border: 1px solid hsla(28, 10%, 53%, 0.298);
+      }
+
+      .total-container {
+        margin-top: 2rem;
+        h1 {
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: rgba(128, 128, 128, 0.813);
+          margin: 0 0 0.3rem 0;
+        }
+        .total {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            font-size: 2rem;
+            font-weight: 600;
+          }
+          .total-month {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            span {
+              font-size: 0.8rem;
+            }
+            p {
+              margin: 0;
+              color: rgba(128, 128, 128, 0.813);
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
