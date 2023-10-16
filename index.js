@@ -8,7 +8,7 @@ async function getData() {
   return data;
 }
 const value = await getData();
-console.log(value);
+
 const valueInObject = value.reduce((acc, curr) => {
   const { day: valueDay, amount } = curr;
   acc[valueDay] = amount;
